@@ -1,0 +1,11 @@
+#Your create foods table code goes here
+
+create 'foods', 'fact'
+
+disable 'foods'
+alter 'foods', {NAME => 'fact', COMPRESSION => 'GZ', BLOOMFILTER => 'ROW'}
+enable 'foods'
+
+#Do not remove the exit call below
+exit
+
